@@ -3,7 +3,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 import { writeFile } from "fs/promises";
 
-const PORT = 9999;
+const PORT = process.env.PORT || 9999;
 const currentFile = fileURLToPath(import.meta.url);
 const app = express();
 
@@ -16,7 +16,6 @@ app.use(express.json());
 
 app.get("/", (_req, res) => {
   res.sendFile(path.resolve(currentFile, "..", "view/index.html"));
-  res.end();
 });
 
 app.post("/view-json", async (req, res) => {
@@ -31,9 +30,8 @@ app.post("/view-json", async (req, res) => {
     ok: true,
     pathToFile: "static/file.json",
   });
-  res.end();
 });
 
-app.listen(process.env.PORT || PORT, () => {
+app.listen(PORT, () => {
   console.log(`server running on port ${PORT}`);
 });
