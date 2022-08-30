@@ -16,6 +16,7 @@ app.use(express.json());
 
 app.get("/", (_req, res) => {
   res.sendFile(path.resolve(currentFile, "..", "view/index.html"));
+  res.end();
 });
 
 app.post("/view-json", async (req, res) => {
@@ -30,6 +31,7 @@ app.post("/view-json", async (req, res) => {
     ok: true,
     pathToFile: "static/file.json",
   });
+  res.end();
 });
 
 app.listen(PORT, () => {
