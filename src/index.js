@@ -22,7 +22,9 @@ app.post("/view-json", async (req, res) => {
   const { body } = req;
   const jsonPath = path.resolve(currentFile, "..", "static/file.json");
 
-  await writeFile(jsonPath, body.value, { encoding: "utf-8" });
+  await writeFile(jsonPath, JSON.stringify(body.value), {
+    encoding: "utf-8",
+  });
 
   res.status(201).json({
     message: "done!",
