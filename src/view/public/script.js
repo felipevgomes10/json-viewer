@@ -20,7 +20,7 @@
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ value: textArea.value }),
+      body: JSON.stringify({ value: JSON.stringify(textArea.value) }),
     });
     const { pathToFile } = await response.json();
     window.location.pathname = pathToFile;
