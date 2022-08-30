@@ -1,0 +1,44 @@
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  height: 100vh;
+  padding: 5rem;
+  background-color: #333;
+}
+
+.section textarea {
+  width: 100%;
+  max-width: 80rem;
+  height: 50rem;
+  font-size: 1.8rem;
+  padding: 1rem;
+  resize: none;
+  background-color: beige;
+}
+
+.section textarea:focus {
+  outline: none;
+}
+
+.section button {
+  border: none;
+  outline: none;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  background-color: darkslateblue;
+  font-size: 1.6rem;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  opacity: 1;
+}
+
+.section button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
