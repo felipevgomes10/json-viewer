@@ -15,15 +15,6 @@
 
   button.addEventListener("click", async () => {
     const textArea = document.querySelector(".textarea");
-    const response = await fetch("/view-json", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-
-      body: JSON.stringify({ value: eval("(" + textArea.value + ")") }),
-    });
-    const { pathToFile } = await response.json();
-    window.location.pathname = pathToFile;
+    window.open(`/view-json?q=${JSON.stringify(eval(`(${textArea.value})`))}`);
   });
 })();
