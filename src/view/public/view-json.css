@@ -27,3 +27,21 @@
 #jsoneditor div.jsoneditor td.jsoneditor-separator {
   padding: 1.5rem 0;
 }
+
+#jsoneditor .jsoneditor-contextmenu,
+#jsoneditor .jsoneditor-contextmenu .jsoneditor-menu {
+  width: max-content;
+}
+
+#jsoneditor .jsoneditor-contextmenu button,
+#jsoneditor .jsoneditor-contextmenu li {
+  width: 100%;
+}
+
+.copy-button {
+  position: fixed;
+  bottom: 2.6rem;
+  right: 3.6rem;
+  width: 13.288rem;
+  height: 6.172rem;
+}

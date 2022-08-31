@@ -22,3 +22,27 @@ img {
 a {
   text-decoration: none;
 }
+
+.button {
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
+  opacity: 1;
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.button.primary {
+  background-color: darkslateblue;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
